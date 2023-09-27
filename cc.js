@@ -23,12 +23,33 @@ function playOneRound(){
      || playerChoice === 'Rock' && computerChoice === 'Scissor') {
         
         console.log('Winner!')
+        playerScore += 1;
     }else if (playerChoice === computerChoice){
         console.log('TIE!')
         playOneRound();
     }else{
         console.log('Loser!')
+        computerScore += 1;
     }
 }
+let playerScore = 0;
+let computerScore = 0;
+
+function game(){
+
+    playOneRound();
+    playOneRound();
+    playOneRound();
+    playOneRound();
+    playOneRound();
+
+    if (playerScore > 2){
+        alert('You Won! POOGGERS');
+    }else{
+        alert('Lost to bot oh nonono pepelaugh');
+    }
 
 
+}
+
+game();
